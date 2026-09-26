@@ -326,227 +326,10 @@ footer{
         font-size:15px;
     }
 }
-
-/* ===== NEW FEATURES ===== */
-html { scroll-padding-top: 75px; }
-
-#progressBar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:0%;
-    height:4px;
-    background:linear-gradient(90deg,#00eaff,#8b5cf6,#ff4ecd);
-    z-index:9999;
-}
-
-.feature-tools{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-left:20px;
-}
-.theme-btn,.menu-btn{
-    border:1px solid #394174;
-    background:#121735;
-    color:#00eaff;
-    border-radius:22px;
-    padding:8px 12px;
-    cursor:pointer;
-    font-size:15px;
-}
-.menu-btn{display:none;}
-
-body.light-mode{
-    background:#f4f7fb;
-    color:#111827;
-}
-body.light-mode nav{background:rgba(244,247,251,.95);border-bottom-color:#d8deea;}
-body.light-mode nav a{color:#111827;}
-body.light-mode .hero{
-    background:radial-gradient(circle at top left,#dce7ff 0,#f4f7fb 45%),
-               radial-gradient(circle at bottom right,#d7f7ff 0,#f4f7fb 45%);
-}
-body.light-mode .hero-text p,
-body.light-mode .about,
-body.light-mode .card p,
-body.light-mode .result-intro{color:#4b5563;}
-body.light-mode .card{background:#fff;border-color:#d8deea;}
-body.light-mode .skills span{background:#eef4ff;border-color:#cbd7ee;}
-body.light-mode .contact-form input,
-body.light-mode .contact-form textarea{background:#fff;color:#111827;border-color:#cbd5e1;}
-body.light-mode footer{background:#e9edf5;color:#4b5563;}
-
-.typing{
-    border-right:2px solid #00eaff;
-    padding-right:5px;
-    white-space:nowrap;
-}
-
-.clock-box{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:18px;
-    padding:9px 14px;
-    border:1px solid #394174;
-    border-radius:25px;
-    background:#121735aa;
-    color:#cbd0e8;
-}
-body.light-mode .clock-box{background:#fff;color:#4b5563;}
-
-.skill-item{margin:18px 0;text-align:left;}
-.skill-label{display:flex;justify-content:space-between;margin-bottom:7px;color:#dbe4ff;}
-body.light-mode .skill-label{color:#374151;}
-.skill-track{height:10px;border-radius:20px;background:#1b2144;overflow:hidden;}
-body.light-mode .skill-track{background:#dfe6f2;}
-.skill-fill{
-    height:100%;
-    width:0;
-    border-radius:20px;
-    background:linear-gradient(90deg,#00eaff,#8b5cf6,#ff4ecd);
-    transition:width 1.3s ease;
-}
-
-.project-btn{
-    display:inline-block;
-    margin-top:16px;
-    padding:9px 15px;
-    border-radius:20px;
-    border:1px solid #394174;
-    background:#121735;
-    color:#00eaff;
-    cursor:pointer;
-}
-body.light-mode .project-btn{background:#eef4ff;}
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.75);
-    z-index:5000;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-.modal.show{display:flex;}
-.modal-box{
-    width:min(600px,100%);
-    background:#10152f;
-    border:1px solid #00eaff;
-    border-radius:20px;
-    padding:28px;
-    position:relative;
-    box-shadow:0 0 40px #00eaff33;
-}
-body.light-mode .modal-box{background:#fff;color:#111827;}
-.close-modal{
-    position:absolute;
-    right:15px;
-    top:10px;
-    border:0;
-    background:none;
-    color:#ff4ecd;
-    font-size:28px;
-    cursor:pointer;
-}
-
-#topBtn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:none;
-    width:45px;
-    height:45px;
-    border:0;
-    border-radius:50%;
-    cursor:pointer;
-    color:white;
-    background:linear-gradient(135deg,#00bfff,#8b5cf6,#ff4ecd);
-    z-index:2000;
-}
-.visit-badge{
-    margin-top:12px;
-    color:#00eaff;
-    font-size:14px;
-}
-
-@media(max-width:700px){
-    .feature-tools{margin-left:0;}
-    .menu-btn{display:inline-block;}
-    nav > div:nth-child(2){
-        display:none;
-        width:100%;
-        text-align:center;
-    }
-    nav.mobile-open > div:nth-child(2){display:block;}
-    nav.mobile-open{flex-wrap:wrap;}
-    .typing{white-space:normal;}
-}
-
 </style>
-
-<style id="future-ready-styles">
-/* ===== FUTURE READY PORTFOLIO ===== */
-:root{
-  --bg:#080b1a; --card:rgba(17,24,50,.78); --text:#f5f7ff; --muted:#aeb8d0;
-  --cyan:#00eaff; --pink:#ff2bd6; --purple:#8b5cf6; --border:rgba(255,255,255,.12);
-  --shadow:0 18px 55px rgba(0,0,0,.35);
-}
-body.light-mode{
-  --bg:#f4f7ff; --card:rgba(255,255,255,.86); --text:#101528; --muted:#59647c;
-  --border:rgba(16,21,40,.12); --shadow:0 18px 45px rgba(40,55,100,.15);
-}
-body{transition:background .35s,color .35s}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
- background:radial-gradient(circle at 10% 10%,rgba(0,234,255,.08),transparent 30%),
- radial-gradient(circle at 90% 30%,rgba(255,43,214,.08),transparent 30%);}
-.future-toolbar{position:fixed;right:18px;bottom:82px;z-index:999;display:flex;flex-direction:column;gap:10px}
-.future-btn{width:45px;height:45px;border:1px solid var(--border);border-radius:50%;
- background:var(--card);color:var(--text);backdrop-filter:blur(12px);cursor:pointer;
- box-shadow:var(--shadow);font-size:18px;transition:.25s}
-.future-btn:hover{transform:translateY(-3px) scale(1.04);border-color:var(--cyan);color:var(--cyan)}
-.section-extra{padding:70px 7%}
-.section-extra h2{text-align:center;font-size:clamp(28px,4vw,42px);margin-bottom:12px}
-.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 35px}
-.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;
- box-shadow:var(--shadow);backdrop-filter:blur(12px);transition:.3s}
-.feature-card:hover{transform:translateY(-6px);border-color:rgba(0,234,255,.45)}
-.feature-icon{font-size:32px;margin-bottom:10px}.feature-card h3{margin:8px 0}
-.feature-card p{color:var(--muted);line-height:1.7}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
-.badge{padding:7px 12px;border-radius:999px;border:1px solid var(--border);font-size:12px;color:var(--muted)}
-.project-tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 25px}
-.filter-btn{padding:10px 16px;border-radius:999px;border:1px solid var(--border);background:var(--card);
- color:var(--text);cursor:pointer}.filter-btn.active,.filter-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-.timeline{max-width:850px;margin:auto;position:relative;padding-left:28px;border-left:2px solid rgba(0,234,255,.25)}
-.timeline-item{position:relative;padding:0 0 28px 24px}.timeline-item:before{content:"";position:absolute;left:-37px;top:4px;
- width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}
-.timeline-item h3{margin:0 0 5px}.timeline-item span{color:var(--cyan);font-size:13px}.timeline-item p{color:var(--muted);line-height:1.6}
-.faq{max-width:850px;margin:auto}.faq-item{border:1px solid var(--border);border-radius:14px;margin:10px 0;background:var(--card);overflow:hidden}
-.faq-q{width:100%;padding:18px;background:none;border:0;color:var(--text);text-align:left;font-size:16px;font-weight:700;cursor:pointer}
-.faq-a{max-height:0;overflow:hidden;padding:0 18px;color:var(--muted);line-height:1.6;transition:.3s}
-.faq-item.open .faq-a{max-height:200px;padding:0 18px 18px}
-.search-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:10vh 20px}
-.search-box{width:min(650px,100%);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px}
-.search-box input{width:100%;padding:15px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--text);outline:none;font-size:16px}
-.command-list{margin-top:12px;display:grid;gap:8px}.command-item{padding:12px;border-radius:10px;color:var(--text);cursor:pointer}
-.command-item:hover{background:rgba(0,234,255,.08);color:var(--cyan)}
-.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;
- background:#11182e;color:#fff;border:1px solid rgba(0,234,255,.4);padding:12px 18px;border-radius:12px;z-index:3000;transition:.3s}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-.dynamic-stat{font-weight:800;color:var(--cyan);font-size:25px}
-.hidden-card{display:none!important}
-@media(max-width:700px){.future-toolbar{right:10px}.section-extra{padding:50px 5%}}
-</style>
-
 </head>
 
 <body>
-<div id="progressBar"></div>
 
 <!-- NAVBAR -->
 <nav>
@@ -561,11 +344,6 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
         <a href="#result">Result</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </div>
-
-    <div class="feature-tools">
-        <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
-        <button class="menu-btn" id="menuBtn" title="Mobile menu">☰</button>
     </div>
 
 </nav>
@@ -585,7 +363,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
             </h1>
 
             <h2>
-                <span id="typingText" class="typing">Future Cyber Security Engineer 🔐</span>
+                Future Cyber Security Engineer 🔐
             </h2>
 
             <p>
@@ -593,10 +371,6 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
                 in Cyber Security, Networking, Linux, Python and
                 Security Operations.
             </p>
-
-            <div class="clock-box">
-                🕒 <span id="liveClock">Loading time...</span>
-            </div>
 
             <a href="#about" class="btn">
                 Explore My Profile 🚀
@@ -630,14 +404,11 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
 
         <p class="about">
 
-           I’m Raviranjan Kumar, a passionate B.Tech Computer Science Engineering student with a strong interest in Cyber Security and technology.
-
-My journey in Computer Science is driven by curiosity, continuous learning, and a desire to understand how technology works — especially how systems and networks can be protected from cyber threats. I am developing my skills in Cyber Security, Networking, Linux, Python, and practical security concepts through hands-on learning and projects.
-
-I believe that every challenge is an opportunity to learn something new. I’m constantly exploring new technologies, building practical projects, and strengthening my problem-solving skills.
-
-🎯 My goal is to build a strong career in Cyber Security, gain real-world experience, and grow into a professional Cyber Security Engineer who can create secure, reliable, and impactful technology solutions.
-
+            I am Raviranjan Kumar, a B.Tech Computer Science Engineering
+            student. I am building my knowledge in Cyber Security,
+            Networking, Linux, Python and practical security concepts.
+            My goal is to continuously improve my technical skills and
+            become a professional Cyber Security Engineer.
 
         </p>
 
@@ -657,11 +428,9 @@ I believe that every challenge is an opportunity to learn something new. I’m c
 
         <div class="skills" style="text-align:center;">
 
-            <span>💻 C</span>
-            <span>💻 C++</span>
             <span>🐍 Python</span>
-            <span>☕ Java</span>
-            <span>📊 DSA</span>
+            <span>🌐 C</span>
+            <span>💻 C++</span>
             <span>🛡️ Cyber Security</span>
             <span>🌐 Networking</span>
             <span>🐧 Linux</span>
@@ -670,6 +439,7 @@ I believe that every challenge is an opportunity to learn something new. I’m c
             <span>🎨 CSS</span>
             <span>⚡ JavaScript</span>
             <span>🗄️ SQL</span>
+            <span>📊 DSA</span>
             <span>🔎 Security Tools</span>
 
         </div>
@@ -678,71 +448,6 @@ I believe that every challenge is an opportunity to learn something new. I’m c
 
 </section>
 
-
-
-        <div class="card" style="margin-top:30px;">
-            <h2 style="color:#00eaff;text-align:center;">⚡ Skill Level</h2>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>💻 C</span><span>100%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="100%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>💻 C++</span><span>100%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="100%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🐍 Python</span><span>70%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>☕ Java</span><span>65%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>📊 DSA</span><span>70%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🛡️ Cyber Security</span><span>65%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🌐 Networking</span><span>60%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🐧 Linux</span><span>65%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🌎 HTML / CSS</span><span>70%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>⚡ JavaScript</span><span>60%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🗄️ SQL</span><span>60%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-label"><span>🔎 Security Tools</span><span>60%</span></div>
-                <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
-            </div>
-        </div>
 
 <!-- EDUCATION -->
 <section id="education">
@@ -867,7 +572,7 @@ I believe that every challenge is an opportunity to learn something new. I’m c
 
                     <div class="result-row">
                         <span>5th Semester</span>
-                        <strong>8</strong>
+                        <strong>pending</strong>
                     </div>
 
 
@@ -930,7 +635,6 @@ I believe that every challenge is an opportunity to learn something new. I’m c
                     A responsive personal portfolio website created
                     using HTML and CSS.
                 </p>
-                <button class="project-btn" onclick="openProject('portfolio')">View Details</button>
 
             </div>
 
@@ -945,7 +649,6 @@ I believe that every challenge is an opportunity to learn something new. I’m c
                     A study portal concept for managing subjects,
                     notes, assignments and academic information.
                 </p>
-                <button class="project-btn" onclick="openProject('study')">View Details</button>
 
             </div>
 
@@ -960,7 +663,6 @@ I believe that every challenge is an opportunity to learn something new. I’m c
                     Learning Cyber Security fundamentals, Linux,
                     networking and security tools through practical study.
                 </p>
-                <button class="project-btn" onclick="openProject('cyber')">View Details</button>
 
             </div>
 
@@ -972,69 +674,6 @@ I believe that every challenge is an opportunity to learn something new. I’m c
 
 
 <!-- CONTACT -->
-
-<!-- ===== FUTURE READY: CAREER / ACHIEVEMENTS ===== -->
-<section class="section-extra" id="journey">
-  <h2>🚀 My Learning Journey</h2>
-  <p class="section-sub">A timeline that can be updated as new skills, internships and achievements are added.</p>
-  <div class="timeline">
-    <div class="timeline-item"><span>2024</span><h3>🎓 B.Tech CSE Started</h3><p>Started the B.Tech Computer Science Engineering journey.</p></div>
-    <div class="timeline-item"><span>2025</span><h3>💻 Programming Foundation</h3><p>Worked with C/C++ and started building web projects.</p></div>
-    <div class="timeline-item"><span>2026</span><h3>🛡️ Cyber Security Focus</h3><p>Building skills around Python, Linux, Networking and Cyber Security.</p></div>
-    <div class="timeline-item"><span>Future</span><h3>🎯 Internship & Projects</h3><p>Add internships, certifications, hackathons and real-world projects here.</p></div>
-  </div>
-</section>
-
-<section class="section-extra" id="certificates">
-  <h2>🏆 Certificates & Achievements</h2>
-  <p class="section-sub">This section is intentionally easy to expand later.</p>
-  <div class="feature-grid" id="certificateGrid">
-    <div class="feature-card"><div class="feature-icon">📜</div><h3>Add Certificate</h3><p>Replace this card with your certificate name, issuing platform, date and verification link.</p><div class="badges"><span class="badge">Future Ready</span></div></div>
-    <div class="feature-card"><div class="feature-icon">🥇</div><h3>Add Achievement</h3><p>Add hackathons, competitions, college achievements or other verified accomplishments.</p><div class="badges"><span class="badge">Achievement</span></div></div>
-    <div class="feature-card"><div class="feature-icon">💼</div><h3>Add Internship</h3><p>Later you can show company, role, duration, work and certificate/offer link here.</p><div class="badges"><span class="badge">Career</span></div></div>
-  </div>
-</section>
-
-<section class="section-extra" id="tech-stack">
-  <h2>⚡ Tech Stack</h2>
-  <p class="section-sub">Skills can be expanded from JavaScript later without redesigning the page.</p>
-  <div class="feature-grid">
-    <div class="feature-card"><div class="feature-icon">🐍</div><h3>Python</h3><p>Programming, automation and future security scripting.</p><div class="badges"><span class="badge">Learning</span><span class="badge">Security</span></div></div>
-    <div class="feature-card"><div class="feature-icon">🐧</div><h3>Linux</h3><p>Command line, system basics and security environment.</p><div class="badges"><span class="badge">Learning</span></div></div>
-    <div class="feature-card"><div class="feature-icon">🌐</div><h3>Networking</h3><p>Networking fundamentals for Cyber Security and SOC.</p><div class="badges"><span class="badge">Core</span></div></div>
-    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Cyber Security</h3><p>Security fundamentals, tools and practical labs.</p><div class="badges"><span class="badge">Focus</span></div></div>
-  </div>
-</section>
-
-<section class="section-extra" id="project-lab">
-  <h2>🧪 Project Lab</h2>
-  <p class="section-sub">Filter your projects by category. More categories can be added later.</p>
-  <div class="project-tools">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-    <button class="filter-btn" data-filter="security">Security</button>
-    <button class="filter-btn" data-filter="python">Python</button>
-    <button class="filter-btn" data-filter="api">API</button>
-  </div>
-  <div class="feature-grid" id="labGrid">
-    <div class="feature-card lab-card" data-category="web"><div class="feature-icon">🌐</div><h3>Portfolio Website</h3><p>Responsive personal portfolio with modern UI.</p><div class="badges"><span class="badge">Web</span></div></div>
-    <div class="feature-card lab-card" data-category="api"><div class="feature-icon">☁️</div><h3>Live Weather</h3><p>API-based weather project can be connected here.</p><div class="badges"><span class="badge">API</span></div></div>
-    <div class="feature-card lab-card" data-category="security"><div class="feature-icon">🔐</div><h3>Security Learning Lab</h3><p>Space for safe, authorized Cyber Security learning projects.</p><div class="badges"><span class="badge">Security</span></div></div>
-    <div class="feature-card lab-card" data-category="python"><div class="feature-icon">🐍</div><h3>Python Projects</h3><p>Future Python automation and utility projects.</p><div class="badges"><span class="badge">Python</span></div></div>
-  </div>
-</section>
-
-<section class="section-extra" id="faq">
-  <h2>❓ FAQ</h2>
-  <p class="section-sub">Useful information for visitors and recruiters.</p>
-  <div class="faq">
-    <div class="faq-item"><button class="faq-q">What is my career goal? <span>+</span></button><div class="faq-a">My goal is to build a career in Cyber Security and continue improving practical technical skills.</div></div>
-    <div class="faq-item"><button class="faq-q">Can I add more projects later? <span>+</span></button><div class="faq-a">Yes. The project cards are designed so new projects and categories can be added easily.</div></div>
-    <div class="faq-item"><button class="faq-q">Can this portfolio connect to APIs? <span>+</span></button><div class="faq-a">Yes. Later you can connect suitable public APIs for features such as weather, GitHub data or other permitted services.</div></div>
-    <div class="faq-item"><button class="faq-q">Is the visitor counter global? <span>+</span></button><div class="faq-a">The built-in counter is browser-local. For real website-wide analytics, connect an analytics service later.</div></div>
-  </div>
-</section>
-
 <section id="contact">
 
     <div class="container contact">
@@ -1154,19 +793,19 @@ I believe that every challenge is an opportunity to learn something new. I’m c
     </div>
 
 </section>
+<!-- Social Media -->
+<div class="social-media">
+    <h3>Social Media</h3>
 
+    <a href="https://www.instagram.com/raviranjankushwaha_4?stkn=MWowZDZiem1oZ201Mw==" target="_blank">
+        📷 Instagram
+    </a>
 
-
-<!-- PROJECT DETAILS MODAL -->
-<div class="modal" id="projectModal">
-    <div class="modal-box">
-        <button class="close-modal" onclick="closeProject()">×</button>
-        <h2 id="modalTitle" style="color:#00eaff;margin-bottom:12px;"></h2>
-        <p id="modalText" style="color:#cbd0e8;"></p>
-    </div>
+    <a href="https://www.linkedin.com/in/raviranjan-kumar-0b16a4383?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+        💼 LinkedIn
+    </a>
 </div>
 
-<button id="topBtn" title="Back to top">↑</button>
 
 <!-- FOOTER -->
 <footer>
@@ -1179,300 +818,11 @@ I believe that every challenge is an opportunity to learn something new. I’m c
         Future Cyber Security Engineer 🔐
     </p>
 
-    <p class="visit-badge">👀 Portfolio visits on this browser: <span id="visitCount">0</span></p>
-
     <p>
         📍 Bihar, Rohtas, Dinara, Pachauli - 802218
     </p>
 
 </footer>
-
-
-<script>
-/* ===== PORTFOLIO NEW FEATURES ===== */
-
-/* Typing animation */
-const typingText = document.getElementById("typingText");
-const typingWords = [
-    "Future Cyber Security Engineer 🔐",
-    "B.Tech CSE Student 💻",
-    "Cyber Security Learner 🛡️",
-    "Python & Linux Learner 🐍",
-    "Networking Enthusiast 🌐"
-];
-let wordIndex = 0, charIndex = 0, deleting = false;
-
-function typeEffect(){
-    const word = typingWords[wordIndex];
-    typingText.textContent = deleting
-        ? word.substring(0, charIndex--)
-        : word.substring(0, charIndex++);
-
-    if(!deleting && charIndex > word.length){
-        deleting = true;
-        setTimeout(typeEffect, 1200);
-        return;
-    }
-    if(deleting && charIndex < 0){
-        deleting = false;
-        wordIndex = (wordIndex + 1) % typingWords.length;
-        charIndex = 0;
-    }
-    setTimeout(typeEffect, deleting ? 45 : 80);
-}
-typeEffect();
-
-/* Live clock */
-function updateClock(){
-    const now = new Date();
-    const time = now.toLocaleTimeString("en-IN", {
-        hour:"2-digit", minute:"2-digit", second:"2-digit"
-    });
-    const date = now.toLocaleDateString("en-IN", {
-        weekday:"short", day:"2-digit", month:"short", year:"numeric"
-    });
-    document.getElementById("liveClock").textContent = date + " • " + time;
-}
-updateClock();
-setInterval(updateClock,1000);
-
-/* Dark / Light mode */
-const themeBtn = document.getElementById("themeBtn");
-if(localStorage.getItem("portfolioTheme") === "light"){
-    document.body.classList.add("light-mode");
-    themeBtn.textContent = "☀️";
-}
-themeBtn.addEventListener("click",()=>{
-    document.body.classList.toggle("light-mode");
-    const light = document.body.classList.contains("light-mode");
-    localStorage.setItem("portfolioTheme", light ? "light" : "dark");
-    themeBtn.textContent = light ? "☀️" : "🌙";
-});
-
-/* Mobile menu */
-const menuBtn = document.getElementById("menuBtn");
-menuBtn.addEventListener("click",()=>{
-    document.querySelector("nav").classList.toggle("mobile-open");
-});
-
-/* Scroll progress + top button + skill animation */
-const topBtn = document.getElementById("topBtn");
-window.addEventListener("scroll",()=>{
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById("progressBar").style.width =
-        (height ? (scrollTop / height) * 100 : 0) + "%";
-
-    topBtn.style.display = scrollTop > 400 ? "block" : "none";
-
-    document.querySelectorAll(".skill-fill").forEach(el=>{
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 50){
-            el.style.width = el.dataset.width;
-        }
-    });
-});
-
-topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-
-/* Project popup */
-const projectData = {
-    portfolio: {
-        title:"🌐 Personal Portfolio",
-        text:"This portfolio presents Raviranjan Kumar's B.Tech CSE profile, skills, education, semester results, projects and contact information. It is responsive and works as a single HTML file."
-    },
-    study: {
-        title:"📚 Study Portal",
-        text:"A planned academic project for organizing subjects, notes, assignments, study resources and student information in one place."
-    },
-    cyber: {
-        title:"🔐 Cyber Security Learning",
-        text:"A learning project focused on Cyber Security fundamentals, Linux, networking, Python and security tools, with practical learning as the main goal."
-    }
-};
-
-function openProject(key){
-    document.getElementById("modalTitle").textContent = projectData[key].title;
-    document.getElementById("modalText").textContent = projectData[key].text;
-    document.getElementById("projectModal").classList.add("show");
-}
-function closeProject(){
-    document.getElementById("projectModal").classList.remove("show");
-}
-document.getElementById("projectModal").addEventListener("click",(e)=>{
-    if(e.target.id === "projectModal") closeProject();
-});
-
-/* Local visitor counter */
-let visits = Number(localStorage.getItem("portfolioVisits") || 0) + 1;
-localStorage.setItem("portfolioVisits", visits);
-document.getElementById("visitCount").textContent = visits;
-
-/* Contact form friendly validation */
-const contactForm = document.querySelector(".contact-form");
-if(contactForm){
-    contactForm.addEventListener("submit",(e)=>{
-        const email = contactForm.querySelector('input[type="email"]').value.trim();
-        if(!email.includes("@")){
-            e.preventDefault();
-            alert("Please enter a valid email address.");
-        }
-    });
-}
-</script>
-
-
-<!-- ===== FUTURE READY CONTROLS ===== -->
-<div class="future-toolbar">
-  <button class="future-btn" id="searchOpen" title="Search / Command Menu">⌕</button>
-  <button class="future-btn" id="themeToggle2" title="Toggle Theme">🌓</button>
-</div>
-
-<div class="search-overlay" id="searchOverlay">
-  <div class="search-box">
-    <input id="commandInput" placeholder="Search portfolio or type a command..." autocomplete="off">
-    <div class="command-list" id="commandList">
-      <div class="command-item" data-action="home">🏠 Home</div>
-      <div class="command-item" data-action="journey">🚀 Learning Journey</div>
-      <div class="command-item" data-action="skills">⚡ Skills</div>
-      <div class="command-item" data-action="projects">💻 Projects</div>
-      <div class="command-item" data-action="certificates">🏆 Certificates</div>
-      <div class="command-item" data-action="contact">📩 Contact</div>
-    </div>
-  </div>
-</div>
-<div class="toast" id="toast"></div>
-
-<script id="future-ready-script">
-/* =========================================================
-   FUTURE-READY PORTFOLIO CONTROLLER
-   Add future features inside the sections below.
-   ========================================================= */
-const PortfolioConfig = {
-  owner: "Raviranjan Kumar",
-  email: "raviranjankumar2005dnra@gmail.com",
-  themeKey: "raviranjan-theme",
-  visitKey: "raviranjan-visits",
-  // Add future social links here:
-  social: {
-    github: "",
-    linkedin: "",
-    instagram: "",
-    youtube: ""
-  }
-};
-
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => document.querySelectorAll(selector);
-
-function showToast(message){
-  const toast = $("#toast");
-  if(!toast) return;
-  toast.textContent = message;
-  toast.classList.add("show");
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(()=>toast.classList.remove("show"),2200);
-}
-
-/* Theme */
-function setTheme(theme){
-  document.body.classList.toggle("light-mode", theme === "light");
-  localStorage.setItem(PortfolioConfig.themeKey, theme);
-}
-const savedTheme = localStorage.getItem(PortfolioConfig.themeKey);
-if(savedTheme) setTheme(savedTheme);
-
-$("#themeToggle2")?.addEventListener("click", ()=>{
-  const light = document.body.classList.contains("light-mode");
-  setTheme(light ? "dark" : "light");
-  showToast(light ? "Dark mode enabled" : "Light mode enabled");
-});
-
-/* Project filters */
-$$(".filter-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    $$(".filter-btn").forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-    const filter = btn.dataset.filter;
-    $$(".lab-card").forEach(card=>{
-      card.classList.toggle("hidden-card", filter !== "all" && card.dataset.category !== filter);
-    });
-  });
-});
-
-/* FAQ accordion */
-$$(".faq-q").forEach(q=>{
-  q.addEventListener("click",()=>{
-    const item=q.parentElement;
-    item.classList.toggle("open");
-    const sign=q.querySelector("span");
-    if(sign) sign.textContent=item.classList.contains("open") ? "−" : "+";
-  });
-});
-
-/* Command/search menu */
-function openCommand(){ $("#searchOverlay").style.display="flex"; $("#commandInput").focus(); }
-function closeCommand(){ $("#searchOverlay").style.display="none"; }
-$("#searchOpen")?.addEventListener("click",openCommand);
-$("#searchOverlay")?.addEventListener("click",e=>{ if(e.target.id==="searchOverlay") closeCommand(); });
-
-const commandActions = {
-  home:"#home", journey:"#journey", skills:"#skills", projects:"#projects",
-  certificates:"#certificates", contact:"#contact"
-};
-function runCommand(action){
-  const target=commandActions[action];
-  if(target){ closeCommand(); document.querySelector(target)?.scrollIntoView({behavior:"smooth"}); }
-}
-$$(".command-item").forEach(item=>item.addEventListener("click",()=>runCommand(item.dataset.action)));
-
-$("#commandInput")?.addEventListener("input",e=>{
-  const term=e.target.value.toLowerCase().trim();
-  $$(".command-item").forEach(item=>{
-    item.style.display=item.textContent.toLowerCase().includes(term) ? "block" : "none";
-  });
-});
-document.addEventListener("keydown",e=>{
-  if(e.key==="Escape") closeCommand();
-  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==="k"){
-    e.preventDefault(); openCommand();
-  }
-});
-
-/* Local visit counter — browser/device only, not global analytics */
-try{
-  const old=Number(localStorage.getItem(PortfolioConfig.visitKey)||0);
-  const current=old+1;
-  localStorage.setItem(PortfolioConfig.visitKey,current);
-  $$(".visitor-count").forEach(el=>el.textContent=current);
-}catch(e){}
-
-/* Smooth navigation fallback */
-$$('a[href^="#"]').forEach(link=>{
-  link.addEventListener("click",e=>{
-    const target=document.querySelector(link.getAttribute("href"));
-    if(target){ e.preventDefault(); target.scrollIntoView({behavior:"smooth"}); }
-  });
-});
-
-/* ===== FUTURE API PLACE =====
-   Example architecture for later:
-   async function loadGitHubData(){
-     const response = await fetch("YOUR_API_URL");
-     const data = await response.json();
-     // Update HTML safely here.
-   }
-   Do not put secret API keys in this public HTML.
-*/
-
-/* ===== FUTURE PROJECT DATA PLACE =====
-   Later projects can be generated from a JS array:
-   const projects = [
-     {title:"Weather App", category:"api", icon:"☁️", description:"..."},
-     {title:"Python Tool", category:"python", icon:"🐍", description:"..."}
-   ];
-*/
-</script>
 
 </body>
 </html>
