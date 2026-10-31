@@ -314,6 +314,122 @@ section{padding:70px 0}
 .result-box{padding:18px}
 .floating-result{right:12px;bottom:70px}
 }
+
+/* ===== PREMIUM 20-FEATURE UPGRADE ===== */
+:root{--accent2:#8b5cf6}
+body{transition:background .35s,color .35s}
+.card,.road,.sem-card,.btn,.icon-btn{transition:all .25s ease}
+.card:hover{border-color:rgba(34,211,238,.48);box-shadow:0 18px 45px rgba(34,211,238,.10)}
+.btn:focus-visible,.input:focus-visible,.search:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.toolkit{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:19px;min-width:0}
+.tool-card h3{font-size:16px;margin:7px 0}
+.tool-card p,.tool-hint{color:var(--muted);font-size:13px}
+.tool-icon{font-size:27px}
+.tool-card input,.tool-card textarea,.tool-card select{width:100%;padding:10px;margin:7px 0;border:1px solid var(--border);border-radius:10px;background:rgba(100,116,139,.10);color:var(--text)}
+.tool-card textarea{min-height:75px;resize:vertical}
+.tool-card button{margin:5px 4px 0 0}
+.tool-output{font-size:14px;color:var(--cyan);margin-top:8px;overflow-wrap:anywhere}
+.tool-row{display:flex;gap:7px;flex-wrap:wrap}
+.tool-row>*{flex:1}
+#siteSearchPanel{position:fixed;inset:0;background:#020617eF;z-index:6000;display:none;align-items:flex-start;justify-content:center;padding:12vh 15px}
+#siteSearchPanel.open{display:flex}
+.search-dialog{width:min(620px,100%);background:#0f172a;border:1px solid #334155;padding:22px;border-radius:20px}
+.search-dialog input{width:100%;padding:15px;border-radius:12px;border:1px solid #475569;background:#020617;color:white}
+#commandResults a{display:block;padding:10px;border-bottom:1px solid #334155;color:#cbd5e1}
+#commandResults a:hover{color:var(--cyan)}
+#focusBanner{display:none;position:fixed;top:78px;right:15px;z-index:1200;background:#0f172a;color:white;padding:10px 15px;border-radius:12px}
+#focusBanner.show{display:block}
+#liveClock{font-variant-numeric:tabular-nums}
+#toast{max-width:90vw;text-align:center}
+body.focus-mode nav,body.focus-mode footer,body.focus-mode .floating-result{opacity:.15;transition:.3s}
+body.focus-mode .hero,body.focus-mode section{filter:saturate(.75)}
+@media(max-width:900px){.toolkit{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:550px){.toolkit{grid-template-columns:1fr}.tool-card{padding:16px}}
+
+
+@media print{nav,.floating-result,#topBtn,.toast,#smart-tools,#siteSearchPanel,#focusBanner{display:none!important}body{background:white!important;color:#111!important}.card{break-inside:avoid;box-shadow:none!important}}
+
+/* Premium v2 additions */
+:root{scroll-behavior:smooth}
+#scrollProgress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--cyan),#a78bfa,#f472b6);z-index:99999}
+#networkBadge{position:fixed;right:18px;bottom:18px;z-index:9998;background:rgba(15,23,42,.92);color:#e2e8f0;border:1px solid rgba(148,163,184,.25);padding:9px 13px;border-radius:30px;font-size:12px;backdrop-filter:blur(12px)}
+.extra-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px;margin-top:28px}
+.extra-card{background:linear-gradient(145deg,rgba(30,41,59,.88),rgba(15,23,42,.92));border:1px solid rgba(148,163,184,.18);border-radius:20px;padding:20px;box-shadow:0 12px 35px rgba(0,0,0,.16);transition:.25s;min-width:0}
+.extra-card:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 18px 40px rgba(34,211,238,.10)}
+.extra-card h3{font-size:16px;margin:8px 0 12px;color:#f8fafc}
+.extra-card p,.extra-card small{color:#aab8cc;font-size:13px;line-height:1.6}
+.extra-card input,.extra-card textarea,.extra-card select,.extra-card button{max-width:100%;margin:5px 4px 5px 0}
+.extra-card input,.extra-card textarea,.extra-card select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:#0b1220;color:#e5edf8}
+.extra-result{display:block;margin-top:10px;padding:10px;border-radius:10px;background:rgba(34,211,238,.08);color:#a5f3fc;min-height:20px;overflow-wrap:anywhere;font-size:13px}
+.extra-card button{cursor:pointer}
+#readingMode.reading-mode{max-width:850px;margin:auto;font-size:1.12em;line-height:1.9}
+#readingMode.reading-mode .extra-card,#readingMode.reading-mode nav{display:none}
+#photoPreview{max-width:100%;max-height:170px;display:block;margin-top:10px;border-radius:12px}
+#shortcutHelp{position:fixed;inset:0;background:#020617dd;z-index:100000;display:none;place-items:center;padding:20px}
+#shortcutHelp .inner{background:#111827;color:#fff;padding:25px;border-radius:18px;max-width:430px;width:100%}
+#shortcutHelp kbd{background:#334155;padding:3px 7px;border-radius:5px}
+@media(max-width:600px){.extra-grid{grid-template-columns:1fr}.extra-card{padding:17px}#networkBadge{bottom:10px;right:10px}}
+@media print{#scrollProgress,#networkBadge,#extra-tools,#shortcutHelp{display:none!important}}
+
+
+/* ===== CYBER / HACKER NEON THEME ===== */
+:root{
+ --bg:#020609;--card:rgba(5,18,22,.88);--text:#e6fff5;
+ --muted:#8bb9a8;--cyan:#00f5a0;--blue:#00d9ff;
+ --purple:#a855f7;--pink:#ff3cac;--green:#39ff14;
+ --border:rgba(0,245,160,.23);
+ --cyber-glow:0 0 12px rgba(0,245,160,.28),0 0 30px rgba(0,217,255,.10)
+}
+html{background:#020609}
+body{
+ background:
+  radial-gradient(ellipse at 15% 12%,rgba(0,245,160,.16),transparent 34%),
+  radial-gradient(ellipse at 88% 25%,rgba(0,217,255,.13),transparent 32%),
+  radial-gradient(ellipse at 50% 100%,rgba(168,85,247,.11),transparent 38%),
+  linear-gradient(rgba(0,245,160,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(0,245,160,.035) 1px,transparent 1px),
+  #020609;
+ background-size:auto,auto,auto,34px 34px,34px 34px,auto;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.12;
+ background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,rgba(0,245,160,.12) 4px);
+ mix-blend-mode:screen
+}
+body:after{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.18;
+ background:linear-gradient(115deg,transparent 0 46%,rgba(0,245,160,.08) 50%,transparent 54%);
+ animation:cyberSweep 9s linear infinite
+}
+@keyframes cyberSweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+body>*{position:relative;z-index:1}
+nav{background:rgba(1,10,12,.88)!important;border-bottom:1px solid rgba(0,245,160,.32);box-shadow:0 8px 30px rgba(0,0,0,.28)}
+.logo,.gradient-text{filter:drop-shadow(0 0 10px rgba(0,245,160,.35))}
+.logo{background:linear-gradient(90deg,#39ff14,#00f5a0,#00d9ff,#a855f7);-webkit-background-clip:text}
+.nav-links a:hover,.section-title span{color:#39ff14!important;text-shadow:0 0 12px rgba(57,255,20,.5)}
+.badge{border-color:rgba(57,255,20,.55)!important;background:rgba(57,255,20,.09)!important;color:#7dff68!important;box-shadow:0 0 22px rgba(57,255,20,.10)}
+button,.btn{border:1px solid rgba(0,245,160,.4)!important;box-shadow:0 0 14px rgba(0,245,160,.08);transition:transform .22s,box-shadow .22s,border-color .22s}
+button:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 0 18px rgba(0,245,160,.28),0 0 35px rgba(0,217,255,.12);border-color:#39ff14!important}
+.extra-card,.project-card,.skill-card,.education-card,.contact-card,.tool-card{
+ border-color:rgba(0,245,160,.22)!important;
+ background:linear-gradient(145deg,rgba(5,25,25,.94),rgba(7,13,27,.94))!important;
+ box-shadow:0 10px 35px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.025)
+}
+.extra-card:hover,.project-card:hover,.skill-card:hover{border-color:#39ff14!important;box-shadow:0 0 0 1px rgba(57,255,20,.16),0 18px 42px rgba(0,245,160,.12)}
+input,textarea,select{border-color:rgba(0,245,160,.28)!important;background:rgba(1,10,14,.88)!important;color:#e6fff5!important}
+input:focus,textarea:focus,select:focus{outline:none!important;border-color:#39ff14!important;box-shadow:0 0 0 3px rgba(57,255,20,.12),0 0 16px rgba(0,245,160,.12)}
+#scrollProgress{background:linear-gradient(90deg,#39ff14,#00f5a0,#00d9ff,#a855f7)!important;box-shadow:0 0 12px #00f5a0}
+#networkBadge{border-color:rgba(0,245,160,.4)!important;box-shadow:0 0 18px rgba(0,245,160,.12)}
+.extra-result{background:rgba(0,245,160,.075)!important;color:#9dffd6!important;border:1px solid rgba(0,245,160,.13)}
+.section-title h2,.hero h1{ text-shadow:0 0 25px rgba(0,245,160,.10)}
+.hero h1 .gradient-text,.hero .gradient-text{background:linear-gradient(90deg,#39ff14,#00f5a0,#00d9ff)!important;-webkit-background-clip:text!important;color:transparent!important}
+footer{border-top:1px solid rgba(0,245,160,.2)}
+/* Small terminal-style accent */
+.cyber-terminal-label{display:inline-flex;align-items:center;gap:8px;color:#7dff68;font:700 11px/1.4 monospace;letter-spacing:2px;text-transform:uppercase}
+.cyber-terminal-label:before{content:"";width:7px;height:7px;border-radius:50%;background:#39ff14;box-shadow:0 0 10px #39ff14}
+@media(prefers-reduced-motion:reduce){body:after{animation:none}}
+
 </style>
 </head>
 
@@ -636,6 +752,83 @@ placeholder="🔎 Search projects..." onkeyup="filterProjects()">
 </div>
 </section>
 
+
+<section id="smart-tools">
+<div class="container reveal">
+<div class="section-title">
+<span>INTERACTIVE EXPERIENCE</span>
+<h2>Smart Portfolio Toolkit</h2>
+<p>20 useful interactive features — try them below.</p>
+</div>
+<div class="toolkit">
+<div class="tool-card"><div class="tool-icon">🕒</div><h3>1. Live Digital Clock</h3><div class="tool-output" id="liveClock">Loading...</div><p class="tool-hint">Your device's local time.</p></div>
+<div class="tool-card"><div class="tool-icon">👋</div><h3>2. Smart Greeting</h3><div class="tool-output" id="greeting">Hello!</div><p class="tool-hint">Changes with the time of day.</p></div>
+<div class="tool-card"><div class="tool-icon">🔎</div><h3>3. Quick Site Search</h3><p>Search sections and jump directly.</p><button class="btn btn-primary" onclick="openSiteSearch()">Open Search (Ctrl + K)</button></div>
+<div class="tool-card"><div class="tool-icon">🎨</div><h3>4. Accent Color Switcher</h3><select id="accentSelect" onchange="changeAccent(this.value)"><option value="cyan">Ocean Cyan</option><option value="green">Emerald</option><option value="pink">Pink</option><option value="orange">Sunset</option></select><p class="tool-hint">Changes the highlight color.</p></div>
+<div class="tool-card"><div class="tool-icon">🔠</div><h3>5. Font Size Control</h3><div class="tool-row"><button class="btn btn-secondary" onclick="changeFont(-1)">A−</button><button class="btn btn-secondary" onclick="changeFont(1)">A+</button><button class="btn btn-secondary" onclick="resetFont()">Reset</button></div></div>
+<div class="tool-card"><div class="tool-icon">🧘</div><h3>6. Focus Mode</h3><p>Reduce visual distractions.</p><button class="btn btn-primary" onclick="toggleFocus()">Toggle Focus</button></div>
+<div class="tool-card"><div class="tool-icon">🖨️</div><h3>7. Print Portfolio</h3><p>Print or save this portfolio as PDF.</p><button class="btn btn-primary" onclick="window.print()">Print / Save PDF</button></div>
+<div class="tool-card"><div class="tool-icon">🔗</div><h3>8. Share Portfolio</h3><p>Share this page with others.</p><button class="btn btn-primary" onclick="sharePortfolio()">Share Page</button></div>
+<div class="tool-card"><div class="tool-icon">📋</div><h3>9. Copy Profile Link</h3><p>Copy the current page address.</p><button class="btn btn-primary" onclick="copyText(location.href,'Profile link copied!')">Copy Link</button></div>
+<div class="tool-card"><div class="tool-icon">📇</div><h3>10. Download Contact Card</h3><p>Save contact details to your device.</p><button class="btn btn-primary" onclick="downloadVCard()">Download vCard</button></div>
+<div class="tool-card"><div class="tool-icon">🧮</div><h3>11. Quick Calculator</h3><input id="calcInput" placeholder="Example: (12+8)*3"><button class="btn btn-primary" onclick="calculate()">Calculate</button><div class="tool-output" id="calcOutput">Result appears here</div></div>
+<div class="tool-card"><div class="tool-icon">📝</div><h3>12. Personal Notepad</h3><textarea id="miniNotes" placeholder="Write your notes..."></textarea><button class="btn btn-primary" onclick="saveNotes()">Save Notes</button><span class="tool-hint" id="notesStatus">Saved only in this browser.</span></div>
+<div class="tool-card"><div class="tool-icon">✅</div><h3>13. To-do List</h3><input id="todoInput" placeholder="Add a task"><button class="btn btn-primary" onclick="addTodo()">Add Task</button><div id="todoList" class="tool-output"></div></div>
+<div class="tool-card"><div class="tool-icon">🎓</div><h3>14. Graduation Countdown</h3><div class="tool-output" id="gradCountdown">Calculating...</div><p class="tool-hint">Target: June 2028 (estimate).</p></div>
+<div class="tool-card"><div class="tool-icon">🔐</div><h3>15. Password Strength Checker</h3><input id="passCheck" type="password" placeholder="Test a password" oninput="checkPassword()"><div class="tool-output" id="passStrength">Enter a password</div><p class="tool-hint">Checked locally; never sent anywhere.</p></div>
+<div class="tool-card"><div class="tool-icon">🎲</div><h3>16. Password Generator</h3><input id="generatedPass" readonly placeholder="Generated password"><button class="btn btn-primary" onclick="generatePassword()">Generate</button><button class="btn btn-secondary" onclick="copyText(document.getElementById('generatedPass').value,'Password copied!')">Copy</button></div>
+<div class="tool-card"><div class="tool-icon">🧠</div><h3>17. Cyber Security Quiz</h3><p id="quizQuestion">What does HTTPS help provide?</p><select id="quizAnswer"><option value="">Choose answer</option><option value="a">Encrypted connection</option><option value="b">More internet speed</option><option value="c">Free storage</option></select><button class="btn btn-primary" onclick="checkQuiz()">Check Answer</button><div class="tool-output" id="quizResult"></div></div>
+<div class="tool-card"><div class="tool-icon">⌨️</div><h3>18. Typing Speed Test</h3><p id="typingSample">Cyber security protects systems and information.</p><textarea id="typingArea" placeholder="Start typing the sentence..." oninput="typingTest()"></textarea><div class="tool-output" id="typingResult">WPM: 0</div></div>
+<div class="tool-card"><div class="tool-icon">🔢</div><h3>19. Message Character Counter</h3><textarea id="counterText" placeholder="Type something..." oninput="countChars()"></textarea><div class="tool-output" id="charCount">0 characters • 0 words</div></div>
+<div class="tool-card"><div class="tool-icon">📱</div><h3>20. Contact Shortcuts</h3><p>Quickly copy your phone number or email.</p><button class="btn btn-primary" onclick="copyText('6205608720','Phone number copied!')">Copy Phone</button><button class="btn btn-secondary" onclick="copyEmail()">Copy Email</button></div>
+</div>
+</div>
+</section>
+
+<section id="extra-tools">
+<div class="container reveal">
+<div class="section-title"><span>PORTFOLIO V2 • EXPANDED TOOLKIT</span><h2>30 More Smart Features</h2><p>30 additional browser tools plus live backend-powered contact, guestbook, feedback and visit statistics.</p></div>
+<div class="extra-grid"><div class='extra-card'><div style='font-size:27px'>📅</div><h3>21. Live Date & Calendar</h3><p>Shows today's full date.</p><div class='extra-result' id='todayDate'>Loading…</div></div>
+<div class='extra-card'><div style='font-size:27px'>📶</div><h3>22. Internet Status</h3><p>Detects whether the browser is online.</p><div class='extra-result' id='netStatus'>Checking…</div></div>
+<div class='extra-card'><div style='font-size:27px'>🖥️</div><h3>23. Device Information</h3><p>Shows browser and screen details.</p><button class='btn btn-primary' onclick='showDeviceInfo()'>Show device info</button><div class='extra-result' id='deviceInfo'>Not checked</div></div>
+<div class='extra-card'><div style='font-size:27px'>🔋</div><h3>24. Battery Status</h3><p>Shows battery level when browser supports it.</p><button class='btn btn-primary' onclick='showBattery()'>Check battery</button><div class='extra-result' id='batteryInfo'>Tap to check</div></div>
+<div class='extra-card'><div style='font-size:27px'>🌍</div><h3>25. Time Zone Finder</h3><p>Shows your device time zone.</p><div class='extra-result' id='timezoneInfo'>Loading…</div></div>
+<div class='extra-card'><div style='font-size:27px'>🎨</div><h3>26. Live Color Picker</h3><p>Pick a color and copy its HEX code.</p><input type='color' id='colorPicker' value='#22d3ee' oninput='showPickedColor()'><div class='extra-result' id='pickedColor'>#22D3EE</div><button class='btn btn-secondary' onclick="copyText(document.getElementById('colorPicker').value,'HEX copied')">Copy HEX</button></div>
+<div class='extra-card'><div style='font-size:27px'>🔢</div><h3>27. Percentage Calculator</h3><p>Find X percent of a number.</p><input id='pctA' type='number' placeholder='Percentage (%)'><input id='pctB' type='number' placeholder='Number'><button class='btn btn-primary' onclick='percentageCalc()'>Calculate</button><div class='extra-result' id='pctResult'>Result appears here</div></div>
+<div class='extra-card'><div style='font-size:27px'>🧮</div><h3>28. Age Calculator</h3><p>Calculate age from date of birth.</p><input id='birthDate' type='date'><button class='btn btn-primary' onclick='ageCalc()'>Calculate age</button><div class='extra-result' id='ageResult'>Enter date of birth</div></div>
+<div class='extra-card'><div style='font-size:27px'>⏱️</div><h3>29. Stopwatch</h3><p>Start, pause and reset a stopwatch.</p><div class='extra-result' id='stopwatchDisplay'>00:00.0</div><button class='btn btn-primary' onclick='startStopwatch()'>Start</button><button class='btn btn-secondary' onclick='pauseStopwatch()'>Pause</button><button class='btn btn-secondary' onclick='resetStopwatch()'>Reset</button></div>
+<div class='extra-card'><div style='font-size:27px'>⏲️</div><h3>30. Countdown Timer</h3><p>Set a timer in seconds.</p><input id='timerSeconds' type='number' min='1' placeholder='Seconds'><button class='btn btn-primary' onclick='startCountdown()'>Start timer</button><button class='btn btn-secondary' onclick='stopCountdown()'>Stop</button><div class='extra-result' id='timerDisplay'>Ready</div></div>
+<div class='extra-card'><div style='font-size:27px'>🔠</div><h3>31. Text Case Converter</h3><p>Convert text to upper/lower/title case.</p><textarea id='caseText' placeholder='Enter text'></textarea><button class='btn btn-primary' onclick='convertCase("upper")'>UPPER</button><button class='btn btn-secondary' onclick='convertCase("lower")'>lower</button><button class='btn btn-secondary' onclick='convertCase("title")'>Title Case</button></div>
+<div class='extra-card'><div style='font-size:27px'>🔗</div><h3>32. URL Encoder / Decoder</h3><p>Encode or decode URL text.</p><textarea id='urlText' placeholder='Text or URL'></textarea><button class='btn btn-primary' onclick='urlConvert(true)'>Encode</button><button class='btn btn-secondary' onclick='urlConvert(false)'>Decode</button><div class='extra-result' id='urlResult'>Output</div></div>
+<div class='extra-card'><div style='font-size:27px'>🧾</div><h3>33. JSON Formatter</h3><p>Validate and format JSON.</p><textarea id='jsonInput' placeholder='Paste JSON here'></textarea><button class='btn btn-primary' onclick='formatJSON()'>Format JSON</button><div class='extra-result' id='jsonResult'>Waiting for JSON</div></div>
+<div class='extra-card'><div style='font-size:27px'>🔐</div><h3>34. Base64 Encoder / Decoder</h3><p>Convert plain text to and from Base64.</p><textarea id='baseText' placeholder='Enter text'></textarea><button class='btn btn-primary' onclick='baseConvert(true)'>Encode</button><button class='btn btn-secondary' onclick='baseConvert(false)'>Decode</button><div class='extra-result' id='baseResult'>Output</div></div>
+<div class='extra-card'><div style='font-size:27px'>🆔</div><h3>35. UUID Generator</h3><p>Generate a random unique ID.</p><button class='btn btn-primary' onclick='makeUUID()'>Generate UUID</button><div class='extra-result' id='uuidResult'>Click generate</div></div>
+<div class='extra-card'><div style='font-size:27px'>📝</div><h3>36. Daily Motivation</h3><p>Get a random positive quote.</p><button class='btn btn-primary' onclick='newQuote()'>New quote</button><div class='extra-result' id='quoteResult'>Keep learning, one step at a time.</div></div>
+<div class='extra-card'><div style='font-size:27px'>🔖</div><h3>37. Save Quick Bookmark</h3><p>Save the current page link in this browser.</p><button class='btn btn-primary' onclick='saveBookmark()'>Bookmark this page</button><div class='extra-result' id='bookmarkResult'>No bookmark yet</div></div>
+<div class='extra-card'><div style='font-size:27px'>📖</div><h3>38. Reading Mode</h3><p>Hide distractions for easier reading.</p><button class='btn btn-primary' onclick='toggleReading()'>Toggle reading mode</button><div class='extra-result'>Switches a simplified reading layout.</div></div>
+<div class='extra-card'><div style='font-size:27px'>⌨️</div><h3>39. Keyboard Shortcuts</h3><p>View useful keyboard shortcuts.</p><button class='btn btn-primary' onclick='showShortcuts()'>Show shortcuts</button><div class='extra-result'>Ctrl + K: Search • Alt + T: Back to top • ? : Help</div></div>
+<div class='extra-card'><div style='font-size:27px'>🖼️</div><h3>40. Image Preview</h3><p>Preview an image before sharing it.</p><input type='file' id='imageFile' accept='image/*' onchange='previewImage(event)'><img id='photoPreview' alt='Image preview'><div class='extra-result' id='imageInfo'>Choose an image</div></div>
+<div class='extra-card'><div style='font-size:27px'>📦</div><h3>41. File Size Checker</h3><p>Check the size of a selected file.</p><input type='file' id='sizeFile' onchange='checkFileSize()'><div class='extra-result' id='fileSizeResult'>Choose a file</div></div>
+<div class='extra-card'><div style='font-size:27px'>🌗</div><h3>42. Contrast Mode</h3><p>Increase contrast for readability.</p><button class='btn btn-primary' onclick='toggleContrast()'>Toggle high contrast</button><div class='extra-result'>Accessibility display option.</div></div>
+<div class='extra-card'><div style='font-size:27px'>🎞️</div><h3>43. Motion Control</h3><p>Reduce animated transitions.</p><button class='btn btn-primary' onclick='toggleMotion()'>Toggle reduced motion</button><div class='extra-result'>Useful if animations feel distracting.</div></div>
+<div class='extra-card'><div style='font-size:27px'>📍</div><h3>44. Section Navigator</h3><p>Jump to a portfolio section.</p><select id='sectionJump'><option value='#home'>Home</option><option value='#about'>About</option><option value='#skills'>Skills</option><option value='#education'>Education</option><option value='#projects'>Projects</option><option value='#contact'>Contact</option><option value='#smart-tools'>20 Tools</option><option value='#extra-tools'>30 More Tools</option></select><button class='btn btn-primary' onclick='jumpSection()'>Go</button></div>
+<div class='extra-card'><div style='font-size:27px'>📊</div><h3>45. Portfolio Visit Stats</h3><p>Reads the public visit counter from backend.</p><button class='btn btn-primary' onclick='loadBackendStats()'>Refresh stats</button><div class='extra-result' id='backendStats'>Backend not checked</div></div>
+<div class='extra-card'><div style='font-size:27px'>💬</div><h3>46. Guestbook</h3><p>Leave a short public message (backend required).</p><input id='guestName' maxlength='60' placeholder='Your name'><textarea id='guestMessage' maxlength='300' placeholder='Your message'></textarea><button class='btn btn-primary' onclick='postGuestbook()'>Post message</button><div class='extra-result' id='guestResult'>Messages appear here after backend setup.</div></div>
+<div class='extra-card'><div style='font-size:27px'>⭐</div><h3>47. Feedback Collector</h3><p>Send feedback to the portfolio backend.</p><select id='feedbackRating'><option value='5'>★★★★★ Excellent</option><option value='4'>★★★★ Very good</option><option value='3'>★★★ Good</option><option value='2'>★★ Needs work</option><option value='1'>★ Poor</option></select><textarea id='feedbackText' maxlength='500' placeholder='Your feedback'></textarea><button class='btn btn-primary' onclick='sendFeedback()'>Submit feedback</button><div class='extra-result' id='feedbackResult'>Backend required</div></div>
+<div class='extra-card'><div style='font-size:27px'>🩺</div><h3>48. Backend Health Check</h3><p>Checks whether your server is running.</p><button class='btn btn-primary' onclick='checkBackend()'>Check backend</button><div class='extra-result' id='healthResult'>Not checked</div></div>
+<div class='extra-card'><div style='font-size:27px'>📨</div><h3>49. Contact API Status</h3><p>Tests the contact-message API route.</p><button class='btn btn-primary' onclick='testContactAPI()'>Test contact API</button><div class='extra-result' id='contactApiResult'>Not checked</div></div>
+<div class='extra-card'><div style='font-size:27px'>🛡️</div><h3>50. Cyber Safety Checklist</h3><p>Quick safety checklist for safer browsing.</p><label><input type='checkbox'> Use unique passwords</label><br><label><input type='checkbox'> Enable 2-step verification</label><br><label><input type='checkbox'> Verify links before clicking</label><br><label><input type='checkbox'> Keep apps updated</label><div class='extra-result'>Tick each item as you complete it.</div></div></div>
+</div>
+</section>
+<div id="scrollProgress"></div>
+<div id="networkBadge">● Checking network…</div>
+<div id="shortcutHelp" onclick="if(event.target===this)this.style.display='none'"><div class="inner"><h3>⌨️ Keyboard shortcuts</h3><p><kbd>Ctrl</kbd> + <kbd>K</kbd> — Open search</p><p><kbd>Alt</kbd> + <kbd>T</kbd> — Back to top</p><p><kbd>?</kbd> — Show this help</p><button class="btn btn-primary" onclick="document.getElementById('shortcutHelp').style.display='none'">Close</button></div></div>
+
+<div id="siteSearchPanel" onclick="if(event.target===this)closeSiteSearch()">
+<div class="search-dialog"><div class="tool-row"><h3 style="color:white">🔎 Search Portfolio</h3><button class="btn btn-secondary" onclick="closeSiteSearch()">Close ✕</button></div><input id="siteSearchInput" placeholder="Try About, Skills, Projects, Contact..." oninput="searchSections()"><div id="commandResults"></div></div>
+</div>
+<div id="focusBanner">🧘 Focus mode is ON <button onclick="toggleFocus()" style="margin-left:10px">Exit</button></div>
+
 <footer>
 <div class="container">
 <p>© 2026 <strong>Raviranjan Kumar</strong> • B.Tech CSE</p>
@@ -686,9 +879,9 @@ placeholder="🔎 Search projects..." onkeyup="filterProjects()">
 <div class="sem-card">
 <div class="sem-top">
 <span class="sem-title">Semester 4 <span class="latest">LATEST</span></span>
-<span class="sgpa">7.06</span>
+<span class="sgpa">7.05</span>
 </div>
-<div class="sem-progress"><span style="width:70.6%"></span></div>
+<div class="sem-progress"><span style="width:70.5%"></span></div>
 </div>
 
 <div class="sem-card">
@@ -903,6 +1096,150 @@ toastTimer=setTimeout(()=>{
 toast.classList.remove("show");
 },2500);
 }
+
+// ===== 20 INTERACTIVE PORTFOLIO FEATURES =====
+function updateClock(){
+ const now=new Date();
+ document.getElementById("liveClock").textContent=now.toLocaleTimeString()+" • "+now.toLocaleDateString();
+ const h=now.getHours();
+ document.getElementById("greeting").textContent=(h<12?"Good morning":h<17?"Good afternoon":h<21?"Good evening":"Good night")+", welcome!";
+}
+updateClock();setInterval(updateClock,1000);
+
+function openSiteSearch(){
+ const panel=document.getElementById("siteSearchPanel");
+ panel.classList.add("open");document.getElementById("siteSearchInput").focus();searchSections();
+}
+function closeSiteSearch(){document.getElementById("siteSearchPanel").classList.remove("open")}
+function searchSections(){
+ const q=document.getElementById("siteSearchInput").value.toLowerCase();
+ const sections=[["Home","#home"],["About","#about"],["Skills","#skills"],["Education","#education"],["Projects","#projects"],["Contact","#contact"],["Smart Tools","#smart-tools"],["30 More Tools","#extra-tools"]];
+ document.getElementById("commandResults").innerHTML=sections.filter(x=>x[0].toLowerCase().includes(q)).map(x=>`<a href="${x[1]}" onclick="closeSiteSearch()">${x[0]} →</a>`).join("")||"<p style='color:#94a3b8;padding:12px'>No section found.</p>";
+}
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openSiteSearch()}if(e.key==="Escape")closeSiteSearch()});
+
+function changeAccent(v){
+ const colors={cyan:"#22d3ee",green:"#34d399",pink:"#f472b6",orange:"#fb923c"};
+ document.documentElement.style.setProperty("--cyan",colors[v]||colors.cyan);
+ localStorage.setItem("portfolioAccent",v);
+}
+const savedAccent=localStorage.getItem("portfolioAccent");
+if(savedAccent){document.getElementById("accentSelect").value=savedAccent;changeAccent(savedAccent)}
+
+let fontScale=100;
+function changeFont(n){fontScale=Math.min(125,Math.max(85,fontScale+n*5));document.body.style.fontSize=fontScale+"%"}
+function resetFont(){fontScale=100;document.body.style.fontSize=""}
+function toggleFocus(){document.body.classList.toggle("focus-mode");document.getElementById("focusBanner").classList.toggle("show",document.body.classList.contains("focus-mode"))}
+
+async function sharePortfolio(){
+ try{if(navigator.share)await navigator.share({title:document.title,text:"Check out my portfolio",url:location.href});else await copyText(location.href,"Share link copied!")}
+ catch(e){if(e.name!=="AbortError")showToast("Sharing not available on this device.")}
+}
+async function copyText(value,msg){
+ if(!value){showToast("Nothing to copy");return}
+ try{await navigator.clipboard.writeText(value);showToast(msg)}
+ catch(e){showToast("Clipboard permission unavailable")}
+}
+function downloadVCard(){
+ const card="BEGIN:VCARD\nVERSION:3.0\nFN:Raviranjan Kumar\nTITLE:B.Tech CSE Student\nTEL:6205608720\nEMAIL:raviranjankumar2005dnra@gmail.com\nADR:;;Pachauli, Dinara, Rohtas, Bihar;;;\nEND:VCARD";
+ const blob=new Blob([card],{type:"text/vcard"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="Raviranjan-Kumar.vcf";a.click();URL.revokeObjectURL(url);
+}
+function calculate(){
+ const raw=document.getElementById("calcInput").value.trim();
+ if(!/^[0-9+\-*/().%\s]+$/.test(raw)){document.getElementById("calcOutput").textContent="Only basic arithmetic is allowed.";return}
+ try{const result=Function('"use strict";return ('+raw+')')();document.getElementById("calcOutput").textContent=Number.isFinite(result)?"Result: "+result:"Invalid calculation"}
+ catch(e){document.getElementById("calcOutput").textContent="Please check your expression."}
+}
+document.getElementById("miniNotes").value=localStorage.getItem("portfolioNotes")||"";
+function saveNotes(){localStorage.setItem("portfolioNotes",document.getElementById("miniNotes").value);document.getElementById("notesStatus").textContent="✓ Notes saved on this browser."}
+let todos=JSON.parse(localStorage.getItem("portfolioTodos")||"[]");
+function renderTodos(){
+ document.getElementById("todoList").innerHTML=todos.map((t,i)=>`<div style="display:flex;justify-content:space-between;gap:8px;margin:6px 0"><span>${t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}</span><button onclick="removeTodo(${i})" aria-label="Delete task">✕</button></div>`).join("")||"No tasks yet.";
+}
+function addTodo(){const el=document.getElementById("todoInput"),v=el.value.trim();if(!v)return;todos.push(v);localStorage.setItem("portfolioTodos",JSON.stringify(todos));el.value="";renderTodos()}
+function removeTodo(i){todos.splice(i,1);localStorage.setItem("portfolioTodos",JSON.stringify(todos));renderTodos()}
+renderTodos();
+function updateGrad(){const target=new Date("2028-06-30T00:00:00"),diff=target-new Date(),days=Math.max(0,Math.ceil(diff/86400000));document.getElementById("gradCountdown").textContent=days+" days remaining";}
+updateGrad();setInterval(updateGrad,3600000);
+function checkPassword(){
+ const p=document.getElementById("passCheck").value;let score=0;
+ if(p.length>=8)score++;if(/[A-Z]/.test(p))score++;if(/[a-z]/.test(p))score++;if(/[0-9]/.test(p))score++;if(/[^A-Za-z0-9]/.test(p))score++;
+ const labels=["Very weak","Weak","Fair","Good","Strong","Very strong"];
+ document.getElementById("passStrength").textContent=p?labels[score]:"Enter a password";
+}
+function generatePassword(){
+ const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*";
+ const bytes=new Uint32Array(16);crypto.getRandomValues(bytes);
+ document.getElementById("generatedPass").value=Array.from(bytes,b=>chars[b%chars.length]).join("");
+}
+function checkQuiz(){
+ const a=document.getElementById("quizAnswer").value;
+ document.getElementById("quizResult").textContent=!a?"Please select an answer.":a==="a"?"✓ Correct! HTTPS encrypts data sent between browser and website.":"✗ Try again. Think about secure communication.";
+}
+let typingStarted=0;
+function typingTest(){
+ const area=document.getElementById("typingArea");if(!typingStarted&&area.value.length)typingStarted=Date.now();
+ const minutes=typingStarted?(Date.now()-typingStarted)/60000:0;
+ const words=area.value.trim()?area.value.trim().split(/\s+/).length:0;
+ document.getElementById("typingResult").textContent="WPM: "+(minutes>0?Math.round(words/minutes):0)+" • "+words+" words typed";
+}
+function countChars(){
+ const t=document.getElementById("counterText").value;
+ document.getElementById("charCount").textContent=t.length+" characters • "+(t.trim()?t.trim().split(/\s+/).length:0)+" words";
+}
+
+
+// ===== 30 additional features =====
+const $ = id => document.getElementById(id);
+function safeText(id, value){ if($(id)) $(id).textContent=value; }
+function updateDateTool(){safeText("todayDate",new Date().toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"}));}
+updateDateTool();
+safeText("timezoneInfo",Intl.DateTimeFormat().resolvedOptions().timeZone || "Unavailable");
+function updateNetwork(){const online=navigator.onLine;safeText("netStatus",online?"Online — internet connection detected":"Offline — no network connection");safeText("networkBadge",online?"● Online":"● Offline");}
+window.addEventListener("online",updateNetwork);window.addEventListener("offline",updateNetwork);updateNetwork();
+function showDeviceInfo(){safeText("deviceInfo",`${navigator.userAgent} | Screen: ${screen.width} × ${screen.height} | Language: ${navigator.language}`);}
+async function showBattery(){if(!navigator.getBattery){safeText("batteryInfo","Battery API not supported in this browser.");return;}try{const b=await navigator.getBattery();safeText("batteryInfo",`${Math.round(b.level*100)}% • ${b.charging?"Charging":"Not charging"}`);}catch(e){safeText("batteryInfo","Battery information unavailable.");}}
+function showPickedColor(){safeText("pickedColor",($("colorPicker").value||"").toUpperCase());}
+function percentageCalc(){const a=Number($("pctA").value),b=Number($("pctB").value);safeText("pctResult",Number.isFinite(a*b/100)?`${a}% of ${b} = ${(a*b/100).toFixed(2)}`:"Enter valid numbers");}
+function ageCalc(){const d=new Date($("birthDate").value);if(!$("birthDate").value||isNaN(d)||d>new Date()){safeText("ageResult","Please enter a valid past date.");return;}const n=new Date();let y=n.getFullYear()-d.getFullYear(),m=n.getMonth()-d.getMonth(),day=n.getDate()-d.getDate();if(day<0)m--;if(m<0){y--;m+=12;}safeText("ageResult",`${y} years, ${m} months (approx.)`);}
+let swStart=0,swElapsed=0,swInterval=null;
+function paintSW(){let t=swElapsed+(swStart?Date.now()-swStart:0);let tenths=Math.floor(t/100),secs=Math.floor(t/1000)%60,mins=Math.floor(t/60000);safeText("stopwatchDisplay",`${String(mins).padStart(2,"0")}:${String(secs).padStart(2,"0")}.${tenths%10}`);}
+function startStopwatch(){if(swStart)return;swStart=Date.now();swInterval=setInterval(paintSW,100);}
+function pauseStopwatch(){if(!swStart)return;swElapsed+=Date.now()-swStart;swStart=0;clearInterval(swInterval);paintSW();}
+function resetStopwatch(){swStart=0;swElapsed=0;clearInterval(swInterval);paintSW();}
+let countdownHandle=null,countdownLeft=0;
+function startCountdown(){stopCountdown();countdownLeft=Math.max(1,Math.floor(Number($("timerSeconds").value)||0));if(!countdownLeft){safeText("timerDisplay","Enter seconds first.");return;}safeText("timerDisplay",countdownLeft+" seconds");countdownHandle=setInterval(()=>{countdownLeft--;safeText("timerDisplay",countdownLeft>0?countdownLeft+" seconds":"⏰ Time is up!");if(countdownLeft<=0)stopCountdown(false);},1000);}
+function stopCountdown(clear=true){clearInterval(countdownHandle);countdownHandle=null;if(clear)safeText("timerDisplay","Timer stopped");}
+function convertCase(mode){let t=$("caseText").value;if(mode==="upper")t=t.toUpperCase();if(mode==="lower")t=t.toLowerCase();if(mode==="title")t=t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());$("caseText").value=t;}
+function urlConvert(encode){try{safeText("urlResult",encode?encodeURIComponent($("urlText").value):decodeURIComponent($("urlText").value));}catch(e){safeText("urlResult","Invalid encoded text.");}}
+function formatJSON(){try{safeText("jsonResult",JSON.stringify(JSON.parse($("jsonInput").value),null,2));}catch(e){safeText("jsonResult","Invalid JSON: "+e.message);}}
+function baseConvert(encode){try{const t=$("baseText").value;safeText("baseResult",encode?btoa(unescape(encodeURIComponent(t))):decodeURIComponent(escape(atob(t))));}catch(e){safeText("baseResult","Invalid Base64 input.");}}
+function makeUUID(){const id=crypto.randomUUID?crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,c=>{const r=crypto.getRandomValues(new Uint8Array(1))[0]%16;return(c==="x"?r:(r&3|8)).toString(16)});safeText("uuidResult",id);}
+const quotes=["Small steps every day create big results.","Learn, practise, improve, repeat.","Your future is built by what you do today.","Stay curious. Keep building.","Consistency is more powerful than motivation."];
+function newQuote(){safeText("quoteResult",quotes[Math.floor(Math.random()*quotes.length)]);}
+function saveBookmark(){localStorage.setItem("rkPortfolioBookmark",location.href);safeText("bookmarkResult","✓ Page link saved in this browser.");}
+function toggleReading(){document.body.classList.toggle("reading-mode");document.body.id=document.body.classList.contains("reading-mode")?"readingMode":"";}
+function showShortcuts(){$("shortcutHelp").style.display="grid";}
+function previewImage(e){const f=e.target.files&&e.target.files[0];if(!f)return;if(!f.type.startsWith("image/")){safeText("imageInfo","Please choose an image file.");return;}const url=URL.createObjectURL(f);$("photoPreview").src=url;safeText("imageInfo",`${f.name} • ${(f.size/1024).toFixed(1)} KB`);}
+function checkFileSize(){const f=$("sizeFile").files[0];safeText("fileSizeResult",f?`${f.name}: ${(f.size/1024/1024).toFixed(2)} MB`:"Choose a file");}
+function toggleContrast(){document.body.classList.toggle("high-contrast");document.body.style.filter=document.body.classList.contains("high-contrast")?"contrast(1.25)":"none";}
+function toggleMotion(){document.body.classList.toggle("reduced-motion");document.body.style.setProperty("--motion",document.body.classList.contains("reduced-motion")?"0s":".25s");}
+function jumpSection(){const el=document.querySelector($("sectionJump").value);if(el)el.scrollIntoView({behavior:"smooth"});}
+async function apiFetch(path,opts={}){const base=window.PORTFOLIO_API_BASE||"";const res=await fetch(base+path,{...opts,headers:{"Content-Type":"application/json",...(opts.headers||{})}});const data=await res.json().catch(()=>({message:"Invalid server response"}));if(!res.ok)throw new Error(data.message||"Request failed");return data;}
+async function loadBackendStats(){try{const d=await apiFetch("/api/stats");safeText("backendStats",`Total visits: ${d.visits} • Guestbook messages: ${d.guestbookCount} • Feedback entries: ${d.feedbackCount}`);}catch(e){safeText("backendStats","Backend unavailable. Start the Node.js server and open http://localhost:3000");}}
+async function postGuestbook(){try{const d=await apiFetch("/api/guestbook",{method:"POST",body:JSON.stringify({name:$("guestName").value,message:$("guestMessage").value})});safeText("guestResult",d.message+" — thank you!");$("guestName").value="";$("guestMessage").value="";}catch(e){safeText("guestResult",e.message);}}
+async function sendFeedback(){try{const d=await apiFetch("/api/feedback",{method:"POST",body:JSON.stringify({rating:Number($("feedbackRating").value),message:$("feedbackText").value})});safeText("feedbackResult",d.message);$("feedbackText").value="";}catch(e){safeText("feedbackResult",e.message);}}
+async function checkBackend(){try{const d=await apiFetch("/api/health");safeText("healthResult",`✓ ${d.status} • ${d.time}`);}catch(e){safeText("healthResult","Server not reachable. Run npm start in backend folder.");}}
+async function testContactAPI(){try{const d=await apiFetch("/api/contact",{method:"OPTIONS"});safeText("contactApiResult","Contact route is reachable (OPTIONS).");}catch(e){safeText("contactApiResult",e.message);}}
+async function sendMessage(e){e.preventDefault();const btn=e.target.querySelector("button");btn.disabled=true;try{const d=await apiFetch("/api/contact",{method:"POST",body:JSON.stringify({name:$("name").value,email:$("email").value,message:$("message").value})});showToast(d.message||"Message sent successfully!");e.target.reset();}catch(err){showToast("Message not sent: "+err.message);}finally{btn.disabled=false;}}
+window.addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;const pct=max>0?(scrollY/max)*100:0;$("scrollProgress").style.width=pct+"%";});
+document.addEventListener("keydown",e=>{if(e.altKey&&e.key.toLowerCase()==="t"){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});}if(e.key==="?"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName))showShortcuts();});
+
+
+// Record a page view with the backend when hosted by this server.
+if(location.protocol.startsWith("http")) fetch("/api/visit",{method:"POST"}).catch(()=>{});
+
 </script>
 
 </body>
